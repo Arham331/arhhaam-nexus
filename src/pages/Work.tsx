@@ -11,8 +11,8 @@ const Work = () => {
 
   const projects = [
     {
-      id: "vector-ai",
-      title: "Vector AI Platform",
+      id: "avenix",
+      title: "AVENIX",
       year: "2024",
       category: ["AI", "Web", "Backend"],
       role: "Lead Developer",

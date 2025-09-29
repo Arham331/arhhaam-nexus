@@ -97,6 +97,17 @@ const About = () => {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
+              At <span className="text-accent font-semibold">RedCoast Corporation</span>, I specialize in 
+              backend engineering, data analytics, and marketing technology. I focus on optimizing ETL 
+              pipelines, building scalable backend services, and automating key 
+              workflows to enhance data-driven decision-making. In addition, I've led initiatives such as
+              modernizing legacy systems into modular API-driven services, improving system scalability, 
+              and delivering real-time, personalized marketing tech solutions. My work thrives at the 
+              intersection of data, technology, and business outcomes, driving innovation while 
+              maintaining clean, efficient codebases.
+            </p>
+
+            <p className="text-lg text-muted-foreground leading-relaxed">
               My work at <span className="text-accent font-semibold">Vector AI</span> involved
               leading the development of a comprehensive AI platform with LangChain integration,
               where I architected real-time document processing systems and implemented advanced Q&A

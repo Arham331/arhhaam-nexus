@@ -45,12 +45,12 @@ const Home = () => {
 
   const featuredProjects = [
     {
-      title: "Vector AI",
+      title: "AVENIX",
       description: "Full-stack AI platform with LangChain integration, real-time processing, and advanced document Q&A capabilities.",
       tech: ["React", "Node.js", "LangChain", "PostgreSQL"],
       role: "Lead Developer",
       image: "ai-platform",
-      link: "/work/vector-ai",
+      link: "/work/avenix",
     },
     {
       title: "unHinged",
@@ -79,7 +79,7 @@ const Home = () => {
   ];
 
   const trustBand = [
-    { label: "Lead Dev", detail: "Vector AI Platform" },
+    { label: "Lead Dev", detail: "AVENIX" },
     { label: "Built", detail: "unHinged Game" },
     { label: "Developed", detail: "AI Meme Checker" },
     { label: "Mobile Dev", detail: "Raah-e-Raast App" },
