@@ -147,17 +147,27 @@ const Home = () => {
             <div className="relative animate-fade-in">
               <div className="relative w-full aspect-square max-w-md mx-auto group">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-cta/20 to-primary/40 rounded-3xl blur-3xl animate-glow-pulse group-hover:scale-110 transition-transform duration-500"></div>
-                <div className="relative glass-card rounded-3xl p-12 flex items-center justify-center hover:border-accent/50 transition-all duration-300">
-                  <div className="w-48 h-48 bg-gradient-to-br from-accent via-cta/30 to-accent/60 rounded-2xl flex items-center justify-center animate-float shadow-2xl hover:shadow-gold transition-all duration-300 group-hover:scale-110 relative overflow-hidden">
-                    <span className="text-8xl font-heading font-bold text-primary relative z-10">A</span>
+                <div className="relative glass-card rounded-3xl p-8 flex items-center justify-center hover:border-accent/50 transition-all duration-100">
+                  <div className="w-64 h-64 bg-gradient-to-br from-accent via-cta/30 to-accent/60 rounded-2xl flex items-center justify-center shadow-2xl hover:shadow-gold transition-all duration-300 group-hover:scale-110 relative overflow-hidden" 
+                       style={{ 
+                         animation: 'gentleFloat 4s ease-in-out infinite',
+                         animationFillMode: 'both'
+                       }}>
+                    <img 
+                      src="/Professional.png" 
+                      alt="Arhhaam Awan Qutab - Professional Photo"
+                      className="w-60 h-60 object-cover rounded-xl border border-primary/15 group-hover:border-accent/25 transition-all duration-1300 relative z-10"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-tr from-cta/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
                 </div>
                 {/* Floating tech icons */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/20 backdrop-blur-md rounded-2xl flex items-center justify-center animate-float border border-accent/30 hover:scale-110 transition-transform">
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-accent/30 hover:scale-110 transition-transform" 
+                     style={{ animation: 'gentleFloat 5s ease-in-out infinite' }}>
                   <Rocket className="w-8 h-8 text-accent" />
                 </div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-cta/20 backdrop-blur-md rounded-2xl flex items-center justify-center animate-float border border-cta/30 hover:scale-110 transition-transform" style={{ animationDelay: '1s' }}>
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-cta/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-cta/30 hover:scale-110 transition-transform" 
+                     style={{ animation: 'gentleFloat 5.5s ease-in-out infinite', animationDelay: '1s' }}>
                   <Zap className="w-8 h-8 text-cta" />
                 </div>
               </div>
