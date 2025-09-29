@@ -88,6 +88,11 @@ All colors MUST be HSL.
     background-image: var(--gradient-accent);
   }
   
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+  
   .glow-accent {
     box-shadow: var(--shadow-glow);
   }
@@ -102,6 +107,25 @@ All colors MUST be HSL.
   
   .transition-smooth {
     transition: var(--transition-smooth);
+  }
+  
+  .glass-card {
+    @apply bg-card/40 backdrop-blur-xl border border-accent/30;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1;
+  }
+  
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
