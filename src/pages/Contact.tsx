@@ -15,19 +15,41 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+    try {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
       });
-      setFormData({ name: "", email: "", subject: "", message: "" });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Failed to send message",
+        description: "There was an error sending your message. Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -45,15 +67,15 @@ const Contact = () => {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      href: "https://linkedin.com/in/arhhaam",
-      label: "linkedin.com/in/arhhaam",
+      href: "https://www.linkedin.com/in/arham-malik-943152352",
+      label: "linkedin.com/in/arham-malik-943152352",
       color: "text-accent",
     },
     {
       name: "GitHub",
       icon: Github,
-      href: "https://github.com/arhhaam",
-      label: "github.com/arhhaam",
+      href: "https://github.com/Arham331",
+      label: "github.com/Arham331",
       color: "text-accent",
     },
   ];
@@ -79,7 +101,15 @@ const Contact = () => {
           <div className="animate-fade-in-up">
             <div className="bg-card border border-accent/20 rounded-2xl p-8">
               <h2 className="text-2xl font-heading font-bold mb-6">Send a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                action="https://formsubmit.co/arham3311@outlook.com"
+                method="POST"
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_subject" value="New Portfolio Contact Form Message" />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Name

@@ -54,7 +54,7 @@ const Footer = () => {
             </h3>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/arhhaam"
+                href="https://github.com/Arham331"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-card hover:bg-accent/20 rounded-lg flex items-center justify-center text-muted-foreground hover:text-accent transition-all hover:scale-110"
@@ -63,7 +63,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/arhhaam"
+                href="https://www.linkedin.com/in/arham-malik-943152352"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-card hover:bg-accent/20 rounded-lg flex items-center justify-center text-muted-foreground hover:text-accent transition-all hover:scale-110"

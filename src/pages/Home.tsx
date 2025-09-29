@@ -332,7 +332,7 @@ const Home = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-accent/30 to-cta opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </Button>
                 </Link>
-                <a href="https://github.com/arhhaam" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Arham331" target="_blank" rel="noopener noreferrer">
                   <Button
                     size="lg"
                     variant="outline"
@@ -342,6 +342,7 @@ const Home = () => {
                     View GitHub
                   </Button>
                 </a>
+                
               </div>
             </div>
           </div>
