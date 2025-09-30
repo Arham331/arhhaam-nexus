@@ -15,7 +15,7 @@ const Footer = () => {
                 <span className="text-xl font-heading font-bold text-primary">A</span>
               </div>
               <span className="text-lg font-heading font-bold text-foreground">
-                Arhhaam Awan Qutab
+                Arham Malik
               </span>
             </div>
             <p className="text-muted-foreground text-sm">
@@ -88,7 +88,7 @@ const Footer = () => {
 
         <div className="border-t border-accent/10 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Arhhaam Awan Qutab. All rights reserved.
+            © {currentYear} Arham Malik. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
             Crafted with precision & futuristic vision

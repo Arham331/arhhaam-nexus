@@ -90,7 +90,7 @@ const About = () => {
             <h2 className="text-3xl font-heading font-bold mb-6">My Journey</h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm <span className="text-foreground font-semibold">Arhhaam Awan Qutab</span>, a
+              I'm <span className="text-foreground font-semibold">Arham Malik</span>, a
               full-stack developer specializing in AI platforms, game systems, and scalable web
               applications. With expertise spanning React, Node.js, Python, and Godot Engine, I've
               built production systems that serve thousands of users.

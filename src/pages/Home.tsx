@@ -103,7 +103,7 @@ const Home = () => {
 
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-7xl font-heading font-bold leading-tight hover:text-gradient transition-all duration-500">
-                  Arhhaam Awan Qutab
+                  Arham Malik
                 </h1>
                 <div className="h-1 w-24 bg-gradient-to-r from-accent via-cta to-accent rounded-full animate-pulse"></div>
               </div>
@@ -155,7 +155,7 @@ const Home = () => {
                        }}>
                     <img 
                       src="/Professional.png" 
-                      alt="Arhhaam Awan Qutab - Professional Photo"
+                      alt="Arham Malik - Professional Photo"
                       className="w-60 h-60 object-cover rounded-xl border border-primary/15 group-hover:border-accent/25 transition-all duration-1300 relative z-10"
                     />
                     <div className="absolute inset-0 bg-gradient-to-tr from-cta/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>

@@ -40,7 +40,7 @@ const Navigation = () => {
               </div>
             </div>
             <span className="text-xl font-heading font-bold text-foreground hidden md:block">
-              Arhhaam Awan Qutab
+              Arham Malik
             </span>
           </Link>
 
