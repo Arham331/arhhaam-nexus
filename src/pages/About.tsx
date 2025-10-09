@@ -228,8 +228,8 @@ const About = () => {
               </Button>
             </Link>
             <a
-              href="/resume.pdf"
-              download
+              href="/ArhamMalikResume.pdf"
+              download="Arham_Malik_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
