@@ -186,24 +186,41 @@ const Work = () => {
           </div>
         )}
 
-        {/* CTA */}
-        <div className="text-center mt-24 pt-16 border-t border-accent/10">
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold">
-              Interested in working together?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I'm available for full-time roles, contract projects, and consulting opportunities
-            </p>
-            <Link to="/contact">
-              <Button
-                size="lg"
-                className="bg-cta hover:bg-cta/90 text-cta-foreground font-heading font-semibold text-lg px-8 py-6 shadow-gold"
-              >
-                Get in touch
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+        {/* CTA Section */}
+        <div className="relative mt-24">
+          <div className="relative bg-gradient-to-br from-primary via-card/80 to-primary border border-accent/30 rounded-3xl p-12 md:p-16 text-center overflow-hidden group hover:border-accent/50 transition-all">
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-cta/5 to-transparent"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            
+            {/* Floating decorative elements */}
+            <div className="absolute top-10 left-10 w-20 h-20 bg-accent/20 rounded-full blur-2xl animate-float"></div>
+            <div className="absolute bottom-10 right-10 w-32 h-32 bg-cta/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }}></div>
+            
+            <div className="relative space-y-6 max-w-3xl mx-auto">
+              <div className="inline-block">
+                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-2">
+                  Interested in working <span className="text-gradient-gold animate-pulse">together</span>?
+                </h2>
+                <div className="h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+              </div>
+              <p className="text-xl text-muted-foreground">
+                I'm available for <span className="text-accent">full-time roles</span>, <span className="text-cta">contract projects</span>, and <span className="text-accent">consulting opportunities</span>
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+                <Link to="/contact">
+                  <Button
+                    size="lg"
+                    className="group bg-cta hover:bg-cta/90 text-cta-foreground font-heading font-semibold text-lg px-8 py-6 glow-gold hover:shadow-2xl hover:scale-110 transition-all relative overflow-hidden"
+                  >
+                    <span className="relative z-10 flex items-center">
+                      Get in touch
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-accent/30 to-cta opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
