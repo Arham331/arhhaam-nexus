@@ -61,7 +61,7 @@ const Home = () => {
       link: "/work/unhinged",
     },
     {
-      title: "AI Meme Checker",
+      title: "Multimodel Meme Classification",
       description: "Multimodal AI tool using PyTorch and GPT-4 for content analysis, combining vision and language models.",
       tech: ["Python", "PyTorch", "GPT-4", "Computer Vision"],
       role: "AI Engineer",
@@ -81,7 +81,7 @@ const Home = () => {
   const trustBand = [
     { label: "Lead Dev", detail: "AVENIX" },
     { label: "Built", detail: "unHinged Game" },
-    { label: "Developed", detail: "AI Meme Checker" },
+    { label: "Developed", detail: "Multimodal Meme Classification" },
     { label: "Mobile Dev", detail: "Raah-e-Raast App" },
   ];
 
@@ -136,7 +136,7 @@ const Home = () => {
                     variant="outline"
                     className="group border-accent text-accent hover:bg-accent/10 font-heading font-semibold text-lg px-8 py-6 hover:scale-105 transition-all hover:glow-accent"
                   >
-                    See case studies
+                    See work history
                     <Star className="ml-2 w-5 h-5 group-hover:rotate-180 transition-transform duration-500" />
                   </Button>
                 </Link>

@@ -80,6 +80,68 @@ All colors MUST be HSL.
   code, pre {
     font-family: 'JetBrains Mono', monospace;
   }
+
+  /* Custom Scrollbar Styles */
+  /* For Webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 4px 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      hsl(243, 76%, 69%),
+      hsl(51, 100%, 50%)
+    );
+    border-radius: 100px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: all 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      to bottom,
+      hsl(243, 76%, 75%),
+      hsl(51, 100%, 60%)
+    );
+    box-shadow: 0 0 20px hsl(243, 76%, 69%, 0.8),
+                0 0 30px hsl(51, 100%, 50%, 0.5);
+    transform: scaleX(1.1);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(
+      to bottom,
+      hsl(243, 76%, 80%),
+      hsl(51, 100%, 65%)
+    );
+    box-shadow: 0 0 25px hsl(243, 76%, 69%),
+                0 0 40px hsl(51, 100%, 50%);
+  }
+
+  /* Remove scrollbar buttons/arrows */
+  ::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(243, 76%, 69%) transparent;
+  }
 }
 
 @keyframes gentleFloat {

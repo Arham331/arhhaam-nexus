@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Filter } from "lucide-react";
+import ParticleBackground from "@/components/ParticleBackground";
 
 const Work = () => {
   const [selectedFilter, setSelectedFilter] = useState("all");
@@ -13,35 +14,32 @@ const Work = () => {
     {
       id: "avenix",
       title: "AVENIX",
-      year: "2024",
+      year: "2025",
       category: ["AI", "Web", "Backend"],
       role: "Lead Developer",
       description: "Comprehensive AI platform with LangChain integration, real-time document processing, and advanced Q&A capabilities.",
       tech: ["React", "Node.js", "LangChain", "PostgreSQL", "Docker"],
-      metrics: "50+ concurrent users, <200ms response time",
-      status: "Production",
+      status: "Delivered 3 months ahead of schedule",
     },
     {
       id: "unhinged",
       title: "unHinged",
-      year: "2024",
+      year: "2025",
       category: ["Game"],
       role: "Game Developer",
       description: "Psychological game featuring advanced AI, dynamic narratives, object pooling for optimization, and complex game mechanics.",
       tech: ["Godot Engine", "GDScript", "AI Systems", "Object Pooling"],
-      metrics: "60 FPS on mid-range hardware",
-      status: "Released",
+      status: "60 FPS on low-end hardware",
     },
     {
       id: "meme-checker",
-      title: "AI Meme Checker",
-      year: "2024",
+      title: "Multimodal Meme Classification",
+      year: "2025",
       category: ["AI", "Backend"],
       role: "AI Engineer",
       description: "Multimodal AI tool using PyTorch and GPT-4 for content analysis, combining computer vision and language models.",
       tech: ["Python", "PyTorch", "GPT-4", "Computer Vision", "NLP"],
-      metrics: "95%+ accuracy on test dataset",
-      status: "Production",
+      status: "95%+ accuracy on test dataset",
     },
     {
       id: "raah-e-raast",
@@ -49,21 +47,40 @@ const Work = () => {
       year: "2023",
       category: ["Mobile", "Backend"],
       role: "Mobile Developer",
-      description: "Islamic mobile application with Firebase integration, real-time data sync, and user authentication.",
-      tech: ["React Native", "Firebase", "Redux", "Push Notifications"],
-      metrics: "1000+ active users",
-      status: "Live",
+      description: "Platform connecting tourists with local guides, featuring real-time tracking and curated travel recommendations.",
+      tech: ["Kotlin", "Android SDK", "Firebase", "Google Cloud API"],
+      status: "Delivered Early with Bonus Features",
     },
     {
       id: "portfolio-projects",
       title: "Portfolio & Client Projects",
-      year: "2023-2024",
-      category: ["Web"],
+      year: "2023-2025",
+      category: ["Web", "Mobile", "AI", "Game", "Backend"],
       role: "Full-Stack Developer",
-      description: "Multiple web applications including e-commerce platforms, dashboards, and content management systems.",
+      description: "11+ diverse projects spanning web apps, mobile development, AI/ML systems, game development, and system optimization.",
       tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
-      metrics: "10+ projects delivered",
-      status: "Various",
+      metrics: "11+ projects",
+      status: "95%+ on-time delivery",
+    },
+    {
+      id: "ta-ld-project",
+      title: "Teacher Assistant & Lab Demonstrator Application",
+      year: "2024",
+      category: ["Web", "Backend"],
+      role: "Full-Stack Developer",
+      description: "Centralized portal where Teacher Assistants and Lab Demonstrators sign in to view assignments and submit completed work.Faculty dashboard to add/manage staff, assign tasks, and monitor progress to keep courses running smoothly.",
+      tech: ["ASP.NET", "SQL", "C#"],
+      status: "Used by 200+ TAs each semester",
+    },
+    {
+      id: "skill-swap",
+      title: "Skill Swap",
+      year: "2023",
+      category: ["Backend"],
+      role: "Full-Stack Developer",
+      description: "Peer-to-peer learning platform where people seamlessly switch between teaching and learning to exchange skills on demand. Real-time chat and calls power sessions, while a built-in review system builds trust and guides better matches over time.",
+      tech: ["Java"],
+      status: "MVP completed",
     },
   ];
 
@@ -73,8 +90,9 @@ const Work = () => {
       : projects.filter((p) => p.category.includes(selectedFilter));
 
   return (
-    <div className="min-h-screen pt-32 pb-24 px-6">
-      <div className="container mx-auto">
+    <div className="min-h-screen pt-32 pb-24 px-6 relative">
+      <ParticleBackground />
+      <div className="container mx-auto relative z-10">
         {/* Header */}
         <div className="text-center space-y-6 mb-16 animate-fade-in-up">
           <h1 className="text-5xl md:text-6xl font-heading font-bold">My Work</h1>

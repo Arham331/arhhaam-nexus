@@ -10,6 +10,7 @@ import {
   Download,
   ExternalLink,
 } from "lucide-react";
+import ParticleBackground from "@/components/ParticleBackground";
 
 const About = () => {
   const values = [
@@ -73,8 +74,9 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-24 px-6">
-      <div className="container mx-auto max-w-5xl">
+    <div className="min-h-screen pt-32 pb-24 px-6 relative">
+      <ParticleBackground />
+      <div className="container mx-auto max-w-5xl relative z-10">
         {/* Header */}
         <div className="text-center space-y-6 mb-20 animate-fade-in-up">
           <h1 className="text-5xl md:text-6xl font-heading font-bold">About Me</h1>
