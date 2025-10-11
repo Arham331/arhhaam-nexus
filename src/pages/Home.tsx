@@ -148,7 +148,7 @@ const Home = () => {
               <div className="relative w-full aspect-square max-w-md mx-auto group">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-cta/20 to-primary/40 rounded-3xl blur-3xl animate-glow-pulse group-hover:scale-110 transition-transform duration-500"></div>
                 <div className="relative glass-card rounded-3xl p-8 flex items-center justify-center hover:border-accent/50 transition-all duration-100">
-                  <div className="w-64 h-64 bg-gradient-to-br from-accent via-cta/30 to-accent/60 rounded-2xl flex items-center justify-center shadow-2xl hover:shadow-gold transition-all duration-300 group-hover:scale-110 relative overflow-hidden" 
+                  <div className="w-fit h-fit p-2 bg-gradient-to-br from-accent via-cta/30 to-accent/60 rounded-2xl flex items-center justify-center shadow-2xl hover:shadow-gold transition-all duration-300 group-hover:scale-110 relative overflow-hidden" 
                        style={{ 
                          animation: 'gentleFloat 4s ease-in-out infinite',
                          animationFillMode: 'both'

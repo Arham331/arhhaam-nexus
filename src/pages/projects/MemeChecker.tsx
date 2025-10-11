@@ -504,7 +504,7 @@ const MemeChecker = () => {
 
       {/* CTA Section */}
       <section className="relative py-16 px-6">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-5xl flex flex-col items-center">
           <div className="glass-card rounded-2xl p-12 text-center space-y-6 bg-gradient-to-br from-primary via-card/80 to-primary border-accent/30 hover:border-accent/50 transition-all group">
             <h2 className="text-3xl md:text-4xl font-heading font-bold">
               Interested in AI & Machine Learning Projects?
