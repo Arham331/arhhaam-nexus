@@ -198,7 +198,7 @@ const Work = () => {
             
             <div className="relative space-y-6 max-w-3xl mx-auto">
               <div className="inline-block">
-                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-2">
+                <h2 className="text-4xl leading-[1.25] md:text-5xl font-heading font-bold mb-2">
                   Interested in working <span className="text-gradient-gold animate-pulse">together</span>?
                 </h2>
                 <div className="h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>

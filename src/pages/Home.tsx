@@ -148,7 +148,7 @@ const Home = () => {
               <div className="relative w-full aspect-square max-w-md mx-auto group">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-cta/20 to-primary/40 rounded-3xl blur-3xl animate-glow-pulse group-hover:scale-110 transition-transform duration-500"></div>
                 <div className="relative glass-card rounded-3xl p-8 flex items-center justify-center hover:border-accent/50 transition-all duration-100">
-                  <div className="w-64 h-64 bg-gradient-to-br from-accent via-cta/30 to-accent/60 rounded-2xl flex items-center justify-center shadow-2xl hover:shadow-gold transition-all duration-300 group-hover:scale-110 relative overflow-hidden" 
+                  <div className="w-fit h-fit p-2 bg-gradient-to-br from-accent via-cta/30 to-accent/60 rounded-2xl flex items-center justify-center shadow-2xl hover:shadow-gold transition-all duration-300 group-hover:scale-110 relative overflow-hidden" 
                        style={{ 
                          animation: 'gentleFloat 4s ease-in-out infinite',
                          animationFillMode: 'both'
@@ -319,8 +319,8 @@ const Home = () => {
             <div className="absolute top-10 left-10 w-20 h-20 bg-accent/20 rounded-full blur-2xl animate-float"></div>
             <div className="absolute bottom-10 right-10 w-32 h-32 bg-cta/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }}></div>
             
-            <div className="relative space-y-6 max-w-3xl mx-auto">
-              <div className="inline-block">
+            <div className="flex flex-col items-center space-y-6 max-w-3xl mx-auto">
+              <div>
                 <h2 className="text-4xl md:text-5xl font-heading font-bold mb-2">
                   Let's Build Something <span className="text-gradient-gold animate-pulse">Extraordinary</span>
                 </h2>
@@ -329,30 +329,29 @@ const Home = () => {
               <p className="text-xl text-muted-foreground">
                 Available for <span className="text-accent">full-time roles</span>, <span className="text-cta">contract work</span>, and <span className="text-accent">consulting projects</span>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-                <Link to="/contact">
+              <div className="flex flex-col md:flex-row gap-4 pt-6">
+                <Link to="/contact" className="group/contactBtn">
                   <Button
                     size="lg"
-                    className="group bg-cta hover:bg-cta/90 text-cta-foreground font-heading font-semibold text-lg px-8 py-6 glow-gold hover:shadow-2xl hover:scale-110 transition-all relative overflow-hidden"
+                    className="bg-cta group-hover/contactBtn:bg-cta/90 text-cta-foreground font-heading font-semibold text-lg px-8 py-6 glow-gold group-hover/contactBtn:shadow-2xl group-hover/contactBtn:scale-110 transition-all relative overflow-hidden"
                   >
-                    <span className="relative z-10 flex items-center">
+                    <span className="z-10 flex items-center">
                       Get in touch
-                      <Rocket className="ml-2 w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                      <Rocket className="ml-2 w-5 h-5 group-hover/contactBtn:-translate-y-1 group-hover/contactBtn:translate-x-1 transition-transform" />
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-accent/30 to-cta opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </Button>
                 </Link>
-                <a href="https://github.com/Arham331" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Arham331" target="_blank" rel="noopener noreferrer" className="group/gitBtn z-10">
                   <Button
                     size="lg"
                     variant="outline"
-                    className="group border-accent text-accent hover:bg-accent/10 font-heading font-semibold text-lg px-8 py-6 hover:scale-105 transition-all hover:glow-accent"
+                    className="border-accent text-accent group-hover/gitBtn:bg-accent/10 font-heading font-semibold text-lg px-8 py-6 group-hover/gitBtn:scale-105 transition-all group-hover/gitBtn:glow-accent"
                   >
-                    <Github className="mr-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
+                    <Github className="mr-2 w-5 h-5 group-hover/gitBtn:rotate-12 transition-transform" />
                     View GitHub
                   </Button>
                 </a>
-                
               </div>
             </div>
           </div>
