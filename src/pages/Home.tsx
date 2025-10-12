@@ -162,13 +162,14 @@ const Home = () => {
                   </div>
                 </div>
                 {/* Floating tech icons */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-accent/30 hover:scale-110 transition-transform" 
-                     style={{ animation: 'gentleFloat 5s ease-in-out infinite' }}>
-                  <Rocket className="w-8 h-8 text-accent" />
+                <div  className="group/rocket absolute overflow-clip -top-4 -right-4 w-16 h-16 bg-accent/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-accent/30 hover:scale-110 transition-transform" 
+                     style={{ animation: 'gentleFloat 5s ease-in-out infinite' }}
+                     >
+                  <Rocket className="w-8 h-8 text-accent absolute group-hover/rocket:RocketLaunch"/>
                 </div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-cta/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-cta/30 hover:scale-110 transition-transform" 
+                <div className="group/zap overflow-clip absolute -bottom-4 -left-4 w-16 h-16 bg-cta/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-cta/30 hover:scale-110 transition-transform" 
                      style={{ animation: 'gentleFloat 5.5s ease-in-out infinite', animationDelay: '1s' }}>
-                  <Zap className="w-8 h-8 text-cta" />
+                  <Zap className="w-8 h-8 text-cta absolute group-hover/zap:ElectricZap" />
                 </div>
               </div>
             </div>

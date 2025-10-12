@@ -144,6 +144,7 @@ All colors MUST be HSL.
   }
 }
 
+
 @keyframes gentleFloat {
   0%, 100% { 
     transform: translateY(0px) rotate(0deg);
@@ -203,6 +204,76 @@ All colors MUST be HSL.
   .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .RocketLaunch{
+    animation: rockLaunch 2s ease-in-out infinite;
+  }
+
+  .ElectricZap{
+    animation: electricZap 1.5s linear infinite;
+  }
+}
+
+@keyframes electricZap{
+  0%, 100% { 
+    @apply mb-36 ml-0;
+    scale: 0.5 1.25;
+  }
+  22%{
+    scale: 0.5 1.25;
+  }
+  25% {
+    @apply -mb-12 ml-0;
+    scale: 2 0.25;
+  }
+  25.01%{
+    @apply mb-36 ml-10;
+    scale: 0.5 1.25;
+  }
+  47%{
+    scale: 0.5 1.25;
+  }
+  50% { 
+    @apply -mb-12 ml-10;
+    scale: 2 0.25;
+  }
+  50.01%{
+    @apply mb-36 -ml-10;
+    scale: 0.5 1.25;
+  }
+  72%{
+    scale: 0.5 1.25;
+  }
+  75% { 
+    @apply -mb-12 -ml-10;
+    scale: 2 0.25;
+  }
+  75.01%{
+    @apply mb-36 ml-0;
+    scale: 0.5 1.25;
+  }
+  97%{
+    scale: 0.5 1.25;
+  }
+  99.99% { 
+    @apply -mb-12 ml-0;
+    scale: 2 0.25;
+  }
+}
+
+@keyframes rockLaunch {
+  0%, 100% { 
+    @apply ml-0 mb-0;
+  }
+  10%{
+    @apply -ml-2 -mb-2;
+  }
+  50% { 
+    @apply ml-28 mb-28;
+  }
+  50.01% {
+    @apply -ml-28 -mb-28;
   }
 }
 
