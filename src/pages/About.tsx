@@ -74,7 +74,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-24 px-6 relative">
+    <div className="min-h-screen pt-32 pb-24 md:px-6 relative">
       <ParticleBackground />
       <div className="container mx-auto max-w-5xl relative z-10">
         {/* Header */}
