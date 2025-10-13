@@ -90,7 +90,7 @@ const Home = () => {
       <ParticleBackground />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-6">
+      <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 md:px-6">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
@@ -162,13 +162,14 @@ const Home = () => {
                   </div>
                 </div>
                 {/* Floating tech icons */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-accent/30 hover:scale-110 transition-transform" 
-                     style={{ animation: 'gentleFloat 5s ease-in-out infinite' }}>
-                  <Rocket className="w-8 h-8 text-accent" />
+                <div  className="group/rocket absolute overflow-clip -top-4 -right-4 w-16 h-16 bg-accent/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-accent/30 hover:scale-110 transition-transform" 
+                     style={{ animation: 'gentleFloat 5s ease-in-out infinite' }}
+                     >
+                  <Rocket className="w-8 h-8 text-accent absolute group-hover/rocket:RocketLaunch"/>
                 </div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-cta/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-cta/30 hover:scale-110 transition-transform" 
+                <div className="group/zap overflow-clip absolute -bottom-4 -left-4 w-16 h-16 bg-cta/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-cta/30 hover:scale-110 transition-transform" 
                      style={{ animation: 'gentleFloat 5.5s ease-in-out infinite', animationDelay: '1s' }}>
-                  <Zap className="w-8 h-8 text-cta" />
+                  <Zap className="w-8 h-8 text-cta absolute group-hover/zap:ElectricZap" />
                 </div>
               </div>
             </div>
@@ -184,13 +185,13 @@ const Home = () => {
             {trustBand.map((item, idx) => (
               <div 
                 key={idx} 
-                className="text-center space-y-1 animate-fade-in hover-lift glass-card rounded-xl p-4 group cursor-default" 
+                className="flex flex-col items-center text-center space-y-1 animate-fade-in hover-lift glass-card rounded-xl p-4 group cursor-default" 
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider group-hover:text-accent transition-colors">
                   {item.label}
                 </p>
-                <p className="text-lg font-heading font-semibold text-foreground group-hover:text-gradient transition-all">
+                <p className="text-md md:text-lg font-heading font-semibold text-foreground group-hover:text-gradient transition-all">
                   {item.detail}
                 </p>
               </div>
@@ -200,7 +201,7 @@ const Home = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="relative py-24 px-6">
+      <section className="relative py-24 md:px-6">
         <div className="container mx-auto">
           <div className="text-center space-y-4 mb-16 animate-on-scroll">
             <h2 className="text-4xl md:text-5xl font-heading font-bold hover:text-gradient transition-all duration-500">Featured Work</h2>
@@ -264,7 +265,7 @@ const Home = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="relative py-24 px-6 bg-gradient-to-b from-card/20 via-accent/5 to-card/20">
+      <section className="relative py-24 md:px-6 bg-gradient-to-b from-card/20 via-accent/5 to-card/20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
         <div className="container mx-auto relative z-10">
           <div className="text-center space-y-4 mb-16 animate-on-scroll">
@@ -309,7 +310,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 px-6">
+      <section className="relative py-24 md:px-6">
         <div className="container mx-auto">
           <div className="relative bg-gradient-to-br from-primary via-card/80 to-primary border border-accent/30 rounded-3xl p-12 md:p-16 text-center overflow-hidden group hover:border-accent/50 transition-all animate-on-scroll">
             <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-cta/5 to-transparent"></div>
@@ -321,7 +322,7 @@ const Home = () => {
             
             <div className="flex flex-col items-center space-y-6 max-w-3xl mx-auto">
               <div>
-                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-2">
+                <h2 className="text-3xl md:text-5xl font-heading font-bold mb-2">
                   Let's Build Something <span className="text-gradient-gold animate-pulse">Extraordinary</span>
                 </h2>
                 <div className="h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>

@@ -169,7 +169,7 @@ const RaahERaast = () => {
       <ParticleBackground />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-6">
+      <section className="relative pt-32 pb-16 md:px-6">
         <div className="container mx-auto">
           {/* Back Button */}
           <Link to="/work" className="inline-flex items-center text-accent hover:text-accent/80 mb-8 group transition-all">
@@ -189,7 +189,7 @@ const RaahERaast = () => {
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-heading font-bold text-gradient">
+              <h1 className="text-4xl md:text-7xl font-heading font-bold text-gradient">
                 Raah-e-Raast
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-accent via-cta to-accent rounded-full"></div>
@@ -203,7 +203,7 @@ const RaahERaast = () => {
       </section>
 
       {/* Project Metrics */}
-      <section className="relative py-12 px-6">
+      <section className="relative py-12 md:px-6">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {projectMetrics.map((metric, idx) => {
@@ -211,7 +211,7 @@ const RaahERaast = () => {
               return (
                 <div
                   key={idx}
-                  className="glass-card rounded-xl p-6 text-center space-y-3 hover:border-accent/40 transition-all hover-lift group"
+                  className="flex flex-col items-center glass-card rounded-xl p-6 text-center space-y-3 hover:border-accent/40 transition-all hover-lift group"
                   style={{ animationDelay: `${idx * 100}ms` }}
                 >
                   <Icon className="w-8 h-8 text-accent mx-auto group-hover:scale-110 transition-transform" />
@@ -227,7 +227,7 @@ const RaahERaast = () => {
       </section>
 
       {/* Project Overview */}
-      <section className="relative py-16 px-6">
+      <section className="relative py-16 md:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="glass-card rounded-2xl p-8 md:p-12 space-y-8">
             <div className="flex items-center space-x-3 mb-6">
@@ -276,7 +276,7 @@ const RaahERaast = () => {
       </section>
 
       {/* Key Features */}
-      <section className="relative py-16 px-6 bg-gradient-to-b from-transparent via-accent/5 to-transparent">
+      <section className="relative py-16 md:px-6 bg-gradient-to-b from-transparent via-accent/5 to-transparent">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-4xl md:text-5xl font-heading font-bold">Key Features</h2>
@@ -311,7 +311,7 @@ const RaahERaast = () => {
       </section>
 
       {/* Core Modules */}
-      <section className="relative py-16 px-6">
+      <section className="relative py-16 md:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-4xl md:text-5xl font-heading font-bold">Core Modules</h2>
@@ -326,11 +326,11 @@ const RaahERaast = () => {
               return (
                 <div
                   key={idx}
-                  className="glass-card rounded-xl p-8 space-y-4 hover:border-accent/40 transition-all hover-lift"
+                  className="overflow-clip glass-card rounded-xl p-8 space-y-4 hover:border-accent/40 transition-all hover-lift"
                   style={{ animationDelay: `${idx * 100}ms` }}
                 >
                   <div className="flex items-start justify-between">
-                    <h3 className="text-2xl font-heading font-semibold text-gradient">{module.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-gradient">{module.title}</h3>
                     <Icon className="w-6 h-6 text-cta flex-shrink-0 mt-1" />
                   </div>
                   <p className="text-muted-foreground leading-relaxed text-lg">
@@ -344,7 +344,7 @@ const RaahERaast = () => {
       </section>
 
       {/* Technical Implementation */}
-      <section className="relative py-16 px-6 bg-gradient-to-b from-transparent via-accent/5 to-transparent">
+      <section className="relative py-16 md:px-6 bg-gradient-to-b from-transparent via-accent/5 to-transparent">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-4xl md:text-5xl font-heading font-bold">Technical Implementation</h2>
@@ -387,7 +387,7 @@ const RaahERaast = () => {
       </section>
 
       {/* Project Highlights */}
-      <section className="relative py-16 px-6">
+      <section className="relative py-16 md:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-4xl md:text-5xl font-heading font-bold">Project Highlights</h2>
@@ -422,7 +422,7 @@ const RaahERaast = () => {
       </section>
 
       {/* Challenges & Solutions */}
-      <section className="relative py-16 px-6 bg-gradient-to-b from-transparent via-accent/5 to-transparent">
+      <section className="relative py-16 md:px-6 bg-gradient-to-b from-transparent via-accent/5 to-transparent">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-4xl md:text-5xl font-heading font-bold">Challenges & Solutions</h2>
@@ -472,7 +472,7 @@ const RaahERaast = () => {
       </section>
 
       {/* Impact & Results */}
-      <section className="relative py-16 px-6">
+      <section className="relative py-16 md:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="glass-card rounded-2xl p-8 md:p-12 space-y-8 bg-gradient-to-br from-card/90 via-accent/5 to-card/90">
             <div className="flex items-center space-x-3 mb-6">
@@ -505,9 +505,9 @@ const RaahERaast = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 px-6">
-        <div className="container mx-auto max-w-5xl flex flex-col items-center">
-          <div className="glass-card rounded-2xl p-12 text-center space-y-6 bg-gradient-to-br from-primary via-card/80 to-primary border-accent/30 hover:border-accent/50 transition-all group">
+      <section className="relative py-16 md:px-6">
+        <div className="container mx-auto max-w-6xl flex flex-col items-center">
+          <div className="glass-card rounded-2xl p-8 md:p-12 text-center space-y-6 bg-gradient-to-br from-primary via-card/80 to-primary border-accent/30 hover:border-accent/50 transition-all group">
             <h2 className="text-3xl md:text-4xl font-heading font-bold">
               Interested in Mobile Development Projects?
             </h2>

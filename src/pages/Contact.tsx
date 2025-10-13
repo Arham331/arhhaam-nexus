@@ -82,7 +82,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-24 px-6 relative">
+    <div className="min-h-screen pt-32 pb-24 md:px-6 relative">
       <ParticleBackground />
       <div className="container mx-auto max-w-5xl relative z-10">
         {/* Header */}
@@ -101,7 +101,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="animate-fade-in-up">
-            <div className="bg-card border border-accent/20 rounded-2xl p-8">
+            <div className="bg-card border border-accent/20 rounded-2xl p-5 md:p-8">
               <h2 className="text-2xl font-heading font-bold mb-6">Send a Message</h2>
               <form 
                 action="https://formsubmit.co/arham3311@outlook.com"
@@ -197,7 +197,7 @@ const Contact = () => {
 
           {/* Contact Info */}
           <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
-            <div className="bg-card border border-accent/20 rounded-2xl p-8">
+            <div className="bg-card border border-accent/20 rounded-2xl p-5 md:p-8">
               <h2 className="text-2xl font-heading font-bold mb-6">Connect With Me</h2>
               <div className="space-y-6">
                 {socialLinks.map((link, idx) => {

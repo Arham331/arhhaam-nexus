@@ -273,7 +273,7 @@ const PortfolioProjects = () => {
       <ParticleBackground />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-6">
+      <section className="relative pt-32 pb-16 md:px-6">
         <div className="container mx-auto">
           {/* Back Button */}
           <Link
@@ -303,7 +303,7 @@ const PortfolioProjects = () => {
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-heading font-bold text-gradient">
+              <h1 className="text-4xl md:text-7xl font-heading font-bold text-gradient">
                 Portfolio & Client Projects
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-accent via-cta to-accent rounded-full"></div>
@@ -318,10 +318,10 @@ const PortfolioProjects = () => {
       </section>
 
       {/* Project Stats */}
-      <section className="relative py-12 px-6">
+      <section className="relative py-12 md:px-6">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="glass-card rounded-xl p-6 text-center space-y-3 hover:border-accent/40 transition-all hover-lift">
+            <div className="flex flex-col items-center glass-card rounded-xl p-6 text-center space-y-3 hover:border-accent/40 transition-all hover-lift">
               <Rocket className="w-8 h-8 text-accent mx-auto" />
               <div className="space-y-1">
                 <p className="text-sm text-muted-foreground uppercase tracking-wide">Projects</p>
@@ -330,7 +330,7 @@ const PortfolioProjects = () => {
                 </p>
               </div>
             </div>
-            <div className="glass-card rounded-xl p-6 text-center space-y-3 hover:border-accent/40 transition-all hover-lift">
+            <div className="flex flex-col items-center glass-card rounded-xl p-6 text-center space-y-3 hover:border-accent/40 transition-all hover-lift">
               <Code2 className="w-8 h-8 text-accent mx-auto" />
               <div className="space-y-1">
                 <p className="text-sm text-muted-foreground uppercase tracking-wide">Technologies</p>
@@ -339,7 +339,7 @@ const PortfolioProjects = () => {
                 </p>
               </div>
             </div>
-            <div className="glass-card rounded-xl p-6 text-center space-y-3 hover:border-accent/40 transition-all hover-lift">
+            <div className="flex flex-col items-center glass-card rounded-xl p-6 text-center space-y-3 hover:border-accent/40 transition-all hover-lift">
               <Calendar className="w-8 h-8 text-accent mx-auto" />
               <div className="space-y-1">
                 <p className="text-sm text-muted-foreground uppercase tracking-wide">Timeline</p>
@@ -348,7 +348,7 @@ const PortfolioProjects = () => {
                 </p>
               </div>
             </div>
-            <div className="glass-card rounded-xl p-6 text-center space-y-3 hover:border-accent/40 transition-all hover-lift">
+            <div className="flex flex-col items-center glass-card rounded-xl p-6 text-center space-y-3 hover:border-accent/40 transition-all hover-lift">
               <CheckCircle2 className="w-8 h-8 text-accent mx-auto" />
               <div className="space-y-1">
                 <p className="text-sm text-muted-foreground uppercase tracking-wide">Delivery</p>
@@ -360,7 +360,7 @@ const PortfolioProjects = () => {
       </section>
 
       {/* Projects Overview */}
-      <section className="relative py-16 px-6">
+      <section className="relative py-16 md:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="glass-card rounded-2xl p-8 md:p-12 space-y-8">
             <div className="flex items-center space-x-3 mb-6">
@@ -424,7 +424,7 @@ const PortfolioProjects = () => {
       </section>
 
       {/* Detailed Projects List */}
-      <section className="relative py-16 px-6 bg-gradient-to-b from-transparent via-accent/5 to-transparent">
+      <section className="relative py-16 md:px-6 bg-gradient-to-b from-transparent via-accent/5 to-transparent">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-4xl md:text-5xl font-heading font-bold">All Projects</h2>
@@ -519,9 +519,9 @@ const PortfolioProjects = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 px-6">
-        <div className="container mx-auto max-w-5xl flex flex-col items-center">
-          <div className="glass-card rounded-2xl p-12 text-center space-y-6 bg-gradient-to-br from-primary via-card/80 to-primary border-accent/30 hover:border-accent/50 transition-all group">
+      <section className="relative py-16 md:px-6">
+        <div className="container mx-auto max-w-6xl flex flex-col items-center">
+          <div className="glass-card rounded-2xl p-8 md:p-12 text-center space-y-6 bg-gradient-to-br from-primary via-card/80 to-primary border-accent/30 hover:border-accent/50 transition-all group">
             <h2 className="text-3xl md:text-4xl font-heading font-bold">
               Looking for a Versatile Developer?
             </h2>
