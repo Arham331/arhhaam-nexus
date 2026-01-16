@@ -90,39 +90,41 @@ const About = () => {
         <section className="mb-24 animate-fade-in-up">
           <div className="bg-card border border-accent/20 rounded-2xl p-8 md:p-12 space-y-6">
             <h2 className="text-3xl font-heading font-bold mb-6">My Journey</h2>
-            
+
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm <span className="text-foreground font-semibold">Arham Malik</span>, a
-              full-stack developer specializing in AI platforms, game systems, and scalable web
-              applications. With expertise spanning React, Node.js, Python, and Godot Engine, I've
-              built production systems that serve thousands of users.
+              I'm <span className="text-foreground font-semibold">Arham Malik</span>, a software engineer who builds 
+              AI platforms, scalable backends, and game systems that ship to real users. My journey started with a deep 
+              curiosity for how systems work under the hood — today, I work across React, Node.js, Python, .NET, and 
+              game engines like Godot to deliver production-grade products used in real business environments.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At <span className="text-accent font-semibold">RedCoast Corporation</span>, I specialize in 
-              backend engineering, data analytics, and marketing technology. I focus on optimizing ETL 
-              pipelines, building scalable backend services, and automating key 
-              workflows to enhance data-driven decision-making. In addition, I've led initiatives such as
-              modernizing legacy systems into modular API-driven services, improving system scalability, 
-              and delivering real-time, personalized marketing tech solutions. My work thrives at the 
-              intersection of data, technology, and business outcomes, driving innovation while 
-              maintaining clean, efficient codebases.
+              At <span className="text-accent font-semibold">RedCoast Corporation</span>, I grew from a trainee into a 
+              core engineer working on data platforms, AI systems, and backend infrastructure. I’ve optimized large-scale 
+              ETL pipelines on BigQuery, cut query latency and costs by major margins, automated critical workflows using 
+              GCP, and helped modernize legacy systems into clean, modular, API-driven architectures that scale reliably.
+              My work directly supports data-driven decision-making and real-time marketing technology.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My work at <span className="text-accent font-semibold">Vector AI</span> involved
-              leading the development of a comprehensive AI platform with LangChain integration,
-              where I architected real-time document processing systems and implemented advanced Q&A
-              capabilities. I thrive on solving complex technical challenges while maintaining clean,
-              maintainable codebases.
+              In parallel, I’ve led and shipped complex AI systems — including an enterprise AI platform built with 
+              <span className="text-accent font-semibold"> LangChain</span>, real-time document processing, contextual memory, 
+              and high-performance APIs. I focus heavily on system design, performance, and maintainability — building 
+              things that don’t just work, but keep working as they grow.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Beyond AI, I've developed <span className="text-accent font-semibold">unHinged</span>,
-              a psychological game with advanced AI systems and dynamic narratives, demonstrating my
-              versatility across different domains. Whether it's multimodal AI tools, mobile
-              applications, or game engines, I bring the same level of precision and innovation to
-              every project.
+              Beyond enterprise systems, I’m also a game developer. I built 
+              <span className="text-accent font-semibold"> unHinged</span>, a psychological survival game using Godot and C#, 
+              featuring procedural generation, AI behavior systems, and dynamic narrative mechanics. Whether I’m building 
+              multimodal AI tools, mobile apps, or gameplay systems, I bring the same engineering discipline: performance, 
+              clarity, and long-term scalability.
+            </p>
+
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Today, my focus is on building <span className="text-foreground font-semibold">future-ready AI platforms, 
+              scalable backend systems, and technically ambitious products</span> — taking ideas from prototype to 
+              production with a strong emphasis on impact, reliability, and clean architecture.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-6">
@@ -134,6 +136,9 @@ const About = () => {
               </Badge>
               <Badge className="bg-accent/20 text-accent border-0 text-base px-4 py-2">
                 Game Developer
+              </Badge>
+              <Badge className="bg-accent/20 text-accent border-0 text-base px-4 py-2">
+                Mobile Developer
               </Badge>
             </div>
           </div>
