@@ -12,6 +12,26 @@ const Work = () => {
 
   const projects = [
     {
+      id: "apex-analytics",
+      title: "Apex Analytics",
+      year: "2026",
+      category: ["Web", "Backend"],
+      role: "Full-Stack Architect",
+      description: "Architected a scalable platform integrating 100+ sources via live data ETL pipelines. Leveraged GCP BigQuery for high-speed server-side transformations and real-time KPI monitoring, using Docker to ensure seamless deployment across enterprise environments.",
+      tech: ["React", "Django", "GCP", "Docker", "ETL", "Google BigQuery"],
+      status: "Fully autonomous system with ETL pipelines",
+    },
+    {
+      id: "evaluasysai",
+      title: "EvaluaSys AI",
+      year: "2025",
+      category: ["AI", "Web", "Backend"],
+      role: "Backend Developer",
+      description: "A large-scale web portal providing Al-driven, transparent assignment evaluation via live project demos, quizzes, and plagiarism detection, so that the demonstration of codes can be easier and done more efficiently, while keeping the marking criteria transparent and fair",
+      tech: ["React", "Flask", "RestAPI", "MongoDB", "AI", "NLP", "Computer Vision", "OpenCV", "Python"],
+      status: "Production-ready system with AI-driven evaluation",
+    },
+    {
       id: "avenix",
       title: "AVENIX",
       year: "2025",
@@ -30,6 +50,26 @@ const Work = () => {
       description: "Psychological game featuring advanced AI, dynamic narratives, object pooling for optimization, and complex game mechanics.",
       tech: ["Godot Engine", "GDScript", "AI Systems", "Object Pooling"],
       status: "60 FPS on low-end hardware",
+    },
+    {
+      id: "snapreceiptai",
+      title: "SnapReceipt AI",
+      year: "2025",
+      category: ["AI", "Web", "Backend"],
+      role: "Full-Stack Engineer",
+      description: "A smart receipt-management platform that automates capturing, organizing, and tracking purchases using AI",
+      tech: ["Python", "Django", "MongoDB", "AI", "LLM", "Prompt Engineering"],
+      status: "Made using Live Data and Production Ready",
+    },
+    {
+      id: "adsyncpro",
+      title: "AdSync Pro",
+      year: "2025",
+      category: ["AI", "Web", "Backend"],
+      role: "Full-Stack Developer",
+      description: "A modern ad-management and automation platform designed to streamline campaign creation, tracking, and performance monitoring.",
+      tech: ["Next.js", "Django", "Python", "MongoDB", "AI", "LLM", "Prompt Engineering"],
+      status: "Fully functional platform working on production with 100+ clients",
     },
     {
       id: "meme-checker",

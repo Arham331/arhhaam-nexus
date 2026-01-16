@@ -18,6 +18,10 @@ import RaahERaast from "./pages/projects/RaahERaast";
 import PortfolioProjects from "./pages/projects/PortfolioProjects";
 import TALabPortal from "./pages/projects/TALabPortal";
 import SkillSwap from "./pages/projects/SkillSwap";
+import ApexAnalytics from "./pages/projects/ApexAnalytics";
+import EvaluaSysAI from "./pages/projects/EvaluaSysAI";
+import AdSyncPro from "./pages/projects/AdSyncPro";
+import SnapReceiptAI from "./pages/projects/SnapReceiptAI";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +40,10 @@ const App = () => (
               <Route path="/work" element={<Work />} />
               <Route path="/work/avenix" element={<Avenix />} />
               <Route path="/work/unhinged" element={<UnHinged />} />
+              <Route path="/work/apex-analytics" element={<ApexAnalytics />} />
+              <Route path="/work/evaluasysai" element={<EvaluaSysAI />} />
+              <Route path="/work/adsyncpro" element={<AdSyncPro/>} />
+              <Route path="/work/snapreceiptai" element={<SnapReceiptAI/>} />
               <Route path="/work/meme-checker" element={<MemeChecker />} />
               <Route path="/work/raah-e-raast" element={<RaahERaast />} />
               <Route path="/work/portfolio-projects" element={<PortfolioProjects />} />
