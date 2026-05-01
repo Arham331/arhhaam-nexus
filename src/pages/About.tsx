@@ -3,36 +3,105 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  Code2,
-  Lightbulb,
-  Users,
-  Zap,
   Download,
+  Zap,
+  Layers,
+  Brain,
+  Terminal,
+  Gamepad2,
+  Cloud,
+  Database,
+  Code2,
+  ChevronDown,
   ExternalLink,
+  Clock,
+  Shield,
+  Handshake,
 } from "lucide-react";
+import { useState } from "react";
 import ParticleBackground from "@/components/ParticleBackground";
 
 const About = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const stats = [
+    { value: "3+", label: "Years Experience" },
+    { value: "60%", label: "Query Latency Reduced" },
+    { value: "80%", label: "AI Workflows Automated" },
+    { value: "50+", label: "Users Served" },
+  ];
+
+  const expertise = [
+    {
+      icon: Terminal,
+      category: "Languages & Frameworks",
+      color: "text-accent",
+      bg: "bg-accent/10",
+      border: "border-accent/20",
+      skills: ["Python", "Java", "Kotlin", "C#", "C/C++", "JavaScript", "TypeScript", "GDScript"],
+    },
+    {
+      icon: Brain,
+      category: "Backend & AI",
+      color: "text-cta",
+      bg: "bg-cta/10",
+      border: "border-cta/20",
+      skills: ["FastAPI", "Spring Boot", "Django/Flask", "LangChain", "RAG Systems", "Vector DBs", "NLP Pipelines", "STT/TTS", "Prompt Routing"],
+    },
+    {
+      icon: Cloud,
+      category: "Cloud & DevOps",
+      color: "text-accent",
+      bg: "bg-accent/10",
+      border: "border-accent/20",
+      skills: ["GCP", "AWS", "Docker", "Kubernetes", "CI/CD Pipelines"],
+    },
+    {
+      icon: Layers,
+      category: "Data Engineering",
+      color: "text-cta",
+      bg: "bg-cta/10",
+      border: "border-cta/20",
+      skills: ["ETL Pipelines", "Google BigQuery", "Query Optimization", "Pandas/Polars", "Real-Time Processing", "Data Modeling"],
+    },
+    {
+      icon: Database,
+      category: "Databases",
+      color: "text-accent",
+      bg: "bg-accent/10",
+      border: "border-accent/20",
+      skills: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "SQLite", "BigQuery"],
+    },
+    {
+      icon: Gamepad2,
+      category: "Game Development",
+      color: "text-cta",
+      bg: "bg-cta/10",
+      border: "border-cta/20",
+      skills: ["Godot Engine", "C#", "AI Systems", "Procedural Generation", "Object Pooling", "Physics Engine"],
+    },
+  ];
+
   const values = [
     {
-      icon: Code2,
-      title: "Precision Engineering",
-      description: "Clean, maintainable code with a focus on scalability and performance optimization.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation First",
-      description: "Leveraging cutting-edge technologies to solve complex problems with elegant solutions.",
-    },
-    {
-      icon: Users,
-      title: "Collaborative Leadership",
-      description: "Building strong teams through clear communication and shared technical vision.",
+      icon: Shield,
+      title: "I Honor My Word",
+      description: "I only accept clients I can genuinely help, and I promise to deliver on what I commit to.",
     },
     {
       icon: Zap,
       title: "Rapid Execution",
-      description: "Shipping production-ready features quickly without compromising on quality.",
+      description: "Ship production-ready features fast without cutting corners on quality or architecture.",
+    },
+    {
+      icon: Handshake,
+      title: "Respectful Partnership",
+      description: "I treat every client with respect and respond in a timely, transparent manner.",
+    },
+    {
+      icon: Code2,
+      title: "Built to Last",
+      description: "I architect systems that don't just work today — they scale reliably as they grow.",
     },
   ];
 
@@ -40,120 +109,264 @@ const About = () => {
     {
       step: "01",
       title: "Discover",
-      description: "Understanding requirements, constraints, and success metrics through stakeholder alignment.",
+      description: "Understanding your requirements, constraints, and success metrics through stakeholder alignment.",
     },
     {
       step: "02",
       title: "Build",
-      description: "Architecting scalable systems with modern tech stacks and best practices.",
+      description: "Architecting scalable systems with modern stacks, clean APIs, and engineering best practices.",
     },
     {
       step: "03",
       title: "Scale",
-      description: "Optimizing performance, implementing monitoring, and ensuring production stability.",
+      description: "Optimizing performance, implementing monitoring, and ensuring long-term production stability.",
     },
   ];
 
-  const expertise = [
+  const faqs = [
     {
-      category: "Frontend",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "React Native"],
+      q: "What's one word that best describes you?",
+      a: "Build-oriented.",
     },
     {
-      category: "Backend",
-      skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "Redis", "Docker"],
+      q: "What makes you different from other developers?",
+      a: "I bring rare Backend + AI + Game Dev skills, with a track record of shipping complex systems ahead of schedule. I don't just write code — I architect systems that scale.",
     },
     {
-      category: "AI/ML",
-      skills: ["Python", "PyTorch", "LangChain", "GPT-4", "Computer Vision", "NLP"],
+      q: "What is your approach to working with clients?",
+      a: "Discover → Build → Scale. I emphasize rapid execution without compromising quality. Clear communication and shared technical vision throughout.",
     },
     {
-      category: "Game Dev",
-      skills: ["Godot Engine", "GDScript", "Game AI", "Object Pooling", "Physics Systems"],
+      q: "Are you available for new opportunities?",
+      a: "Yes — currently open to full-time roles, contract projects, and technical consulting. Remote-first, internationally available.",
     },
+    {
+      q: "Where can I see examples of your work?",
+      a: "Visit arham-nexus.vercel.app/work for a full breakdown of projects, case studies, and shipped products.",
+    },
+    {
+      q: "What motivates you?",
+      a: "Building future-ready systems. My mother always said: 'Time should work for you, not against you' — that drives everything I do.",
+    },
+  ];
+
+  const specialties = [
+    "AI Applications",
+    "SaaS Platforms",
+    "AI Integrations",
+    "AI Agents",
+    "NLP",
+    "Data Science & Analytics",
+    "MLOps",
+    "ETL Pipelines",
+    "FinTech Systems",
+    "Game Development",
+    "Mobile Apps",
+    "REST APIs",
+    "LLM Applications",
+    "RAG Systems",
+    "EdTech Solutions",
+  ];
+
+  const tags = [
+    "Python", "FastAPI", "LangChain", "RAG", "ETL", "BigQuery",
+    "React", "Next.js", "TypeScript", "Node.js", "Spring Boot",
+    "Docker", "Kubernetes", "GCP", "AWS", "PostgreSQL", "MongoDB",
+    "NLP", "ComputerVision", "MLOps", "CI/CD", "WebSockets",
+    "Godot", "GameAI", "ProceduralGen",
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-24 md:px-6 relative">
+    <div className="min-h-screen pt-32 pb-24 md:px-6 relative overflow-hidden">
       <ParticleBackground />
+
+      {/* Ambient glow blobs */}
+      <div className="pointer-events-none absolute top-40 -left-40 w-96 h-96 rounded-full bg-accent/5 blur-3xl" />
+      <div className="pointer-events-none absolute top-[60%] -right-40 w-96 h-96 rounded-full bg-cta/5 blur-3xl" />
+
       <div className="container mx-auto max-w-5xl relative z-10">
-        {/* Header */}
+
+        {/* ── HERO HEADER ── */}
         <div className="text-center space-y-6 mb-20 animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-heading font-bold">About Me</h1>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-accent/5 text-accent text-sm font-medium mb-4">
+            <span className="w-2 h-2 rounded-full bg-cta animate-pulse" />
+            Available for opportunities
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-heading font-bold leading-tight">
+            The{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-cta">
+              System Builder
+            </span>
+          </h1>
+
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Full-stack developer with a passion for building future-ready systems. I combine
-            technical depth with product thinking to deliver meaningful solutions.
+            Backend & AI Engineer who architects scalable systems, automates workflows, and ships production-grade products that keep working as they grow.
           </p>
+
+          <blockquote className="mt-6 inline-block border-l-2 border-accent/40 pl-5 text-left">
+            <p className="text-muted-foreground italic text-base">
+              "Time should work for you, not against you."
+            </p>
+            <footer className="mt-1 text-sm text-accent">— Beloved Mother</footer>
+          </blockquote>
         </div>
 
-        {/* Story */}
+        {/* ── STATS STRIP ── */}
         <section className="mb-24 animate-fade-in-up">
-          <div className="bg-card border border-accent/20 rounded-2xl p-8 md:p-12 space-y-6">
-            <h2 className="text-3xl font-heading font-bold mb-6">My Journey</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {stats.map((stat, idx) => (
+              <div
+                key={idx}
+                className="bg-card border border-accent/20 rounded-xl p-6 text-center hover:border-accent/40 transition-all hover:scale-105"
+                style={{ animationDelay: `${idx * 80}ms` }}
+              >
+                <div className="text-4xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent to-cta">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </section>
 
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm <span className="text-foreground font-semibold">Arham Malik</span>, a software engineer who builds 
-              AI platforms, scalable backends, and game systems that ship to real users. My journey started with a deep 
-              curiosity for how systems work under the hood — today, I work across React, Node.js, Python, .NET, and 
-              game engines like Godot to deliver production-grade products used in real business environments.
-            </p>
+        {/* ── MY STORY ── */}
+        <section className="mb-24 animate-fade-in-up">
+          <div className="bg-card border border-accent/20 rounded-2xl p-8 md:p-12">
+            {/* Section label */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="h-px flex-1 bg-accent/20" />
+              <span className="text-xs font-heading font-semibold tracking-widest text-accent uppercase">My Journey</span>
+              <div className="h-px flex-1 bg-accent/20" />
+            </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              At <span className="text-accent font-semibold">RedCoast Corporation</span>, I grew from a trainee into a 
-              core engineer working on data platforms, AI systems, and backend infrastructure. I’ve optimized large-scale 
-              ETL pipelines on BigQuery, cut query latency and costs by major margins, automated critical workflows using 
-              GCP, and helped modernize legacy systems into clean, modular, API-driven architectures that scale reliably.
-              My work directly supports data-driven decision-making and real-time marketing technology.
-            </p>
+            <div className="grid md:grid-cols-2 gap-10">
+              <div className="space-y-5">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  I'm <span className="text-foreground font-semibold">Arham Malik</span> — a Backend & AI Engineer with 3+ years of building scalable APIs, AI-powered platforms, and data pipelines used in real production environments.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  My journey started with a deep curiosity for how systems work under the hood. Today, I work across Python, Java, C#, React, and engines like Godot — delivering products that ship, scale, and stay reliable.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  At <span className="text-accent font-semibold">RedCoast Corporation</span>, I grew from trainee to core engineer — automating AI workflows, cutting query latency by 60%, and optimizing BigQuery ETL pipelines that saved 30% in data costs.
+                </p>
+              </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              In parallel, I’ve led and shipped complex AI systems — including an enterprise AI platform built with 
-              <span className="text-accent font-semibold"> LangChain</span>, real-time document processing, contextual memory, 
-              and high-performance APIs. I focus heavily on system design, performance, and maintainability — building 
-              things that don’t just work, but keep working as they grow.
-            </p>
+              <div className="space-y-5">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  At <span className="text-accent font-semibold">Zindigi</span>, I contributed to a core banking system using Java and Spring Boot — working across the full SDLC of a FinTech application with real transaction processing.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Currently at <span className="text-accent font-semibold">Tech Solutions.ae</span>, I build optimized ETL pipelines with Python and AWS, containerize services with Docker, and resolve production issues for large-scale data workloads.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Beyond enterprise systems, I built <span className="text-cta font-semibold">unHinged</span> — a psychological 2D survival game in Godot with procedural generation, a real-time "Fear Meter" system, and a stable 60 FPS via object pooling.
+                </p>
+              </div>
+            </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Beyond enterprise systems, I’m also a game developer. I built 
-              <span className="text-accent font-semibold"> unHinged</span>, a psychological survival game using Godot and C#, 
-              featuring procedural generation, AI behavior systems, and dynamic narrative mechanics. Whether I’m building 
-              multimodal AI tools, mobile apps, or gameplay systems, I bring the same engineering discipline: performance, 
-              clarity, and long-term scalability.
-            </p>
-
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Today, my focus is on building <span className="text-foreground font-semibold">future-ready AI platforms, 
-              scalable backend systems, and technically ambitious products</span> — taking ideas from prototype to 
-              production with a strong emphasis on impact, reliability, and clean architecture.
-            </p>
-
-            <div className="flex flex-wrap gap-3 pt-6">
-              <Badge className="bg-cta/20 text-cta border-0 text-base px-4 py-2">
-                Full-Stack Developer
-              </Badge>
-              <Badge className="bg-accent/20 text-accent border-0 text-base px-4 py-2">
-                AI Engineer
-              </Badge>
-              <Badge className="bg-accent/20 text-accent border-0 text-base px-4 py-2">
-                Game Developer
-              </Badge>
-              <Badge className="bg-accent/20 text-accent border-0 text-base px-4 py-2">
-                Mobile Developer
-              </Badge>
+            <div className="flex flex-wrap gap-3 pt-8 mt-8 border-t border-accent/10">
+              <Badge className="bg-cta/20 text-cta border-0 text-sm px-4 py-1.5">Backend Engineer</Badge>
+              <Badge className="bg-accent/20 text-accent border-0 text-sm px-4 py-1.5">AI Engineer</Badge>
+              <Badge className="bg-accent/20 text-accent border-0 text-sm px-4 py-1.5">Game Developer</Badge>
+              <Badge className="bg-accent/20 text-accent border-0 text-sm px-4 py-1.5">Mobile Developer</Badge>
+              <Badge className="bg-accent/20 text-accent border-0 text-sm px-4 py-1.5">Data Engineer</Badge>
             </div>
           </div>
         </section>
 
-        {/* Values */}
+        {/* ── TECHNICAL EXPERTISE ── */}
         <section className="mb-24">
-          <h2 className="text-3xl font-heading font-bold text-center mb-12">Core Values</h2>
+          <div className="flex items-center gap-3 mb-12">
+            <div className="h-px flex-1 bg-accent/20" />
+            <span className="text-xs font-heading font-semibold tracking-widest text-accent uppercase">Technical Expertise</span>
+            <div className="h-px flex-1 bg-accent/20" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {expertise.map((area, idx) => {
+              const Icon = area.icon;
+              return (
+                <div
+                  key={idx}
+                  className={`bg-card border ${area.border} rounded-xl p-6 space-y-4 hover:scale-[1.02] transition-all animate-fade-in-up group`}
+                  style={{ animationDelay: `${idx * 80}ms` }}
+                >
+                  <div className={`w-10 h-10 ${area.bg} rounded-lg flex items-center justify-center`}>
+                    <Icon className={`w-5 h-5 ${area.color}`} />
+                  </div>
+                  <h3 className={`text-base font-heading font-semibold ${area.color}`}>
+                    {area.category}
+                  </h3>
+                  <div className="flex flex-wrap gap-1.5">
+                    {area.skills.map((skill, i) => (
+                      <Badge
+                        key={i}
+                        variant="outline"
+                        className="border-accent/20 text-muted-foreground text-xs"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ── SPECIALTIES TAG CLOUD ── */}
+        <section className="mb-24 animate-fade-in-up">
+          <div className="flex items-center gap-3 mb-12">
+            <div className="h-px flex-1 bg-accent/20" />
+            <span className="text-xs font-heading font-semibold tracking-widest text-accent uppercase">Specialties</span>
+            <div className="h-px flex-1 bg-accent/20" />
+          </div>
+
+          <div className="bg-card border border-accent/20 rounded-2xl p-8 space-y-6">
+            <div className="flex flex-wrap gap-2">
+              {specialties.map((s, i) => (
+                <span
+                  key={i}
+                  className="px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium hover:bg-accent/20 transition-colors cursor-default"
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
+
+            <div className="border-t border-accent/10 pt-6">
+              <p className="text-xs text-muted-foreground uppercase tracking-widest mb-3 font-heading">Tech Tags</p>
+              <div className="flex flex-wrap gap-2">
+                {tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 rounded-md bg-card border border-accent/10 text-muted-foreground text-xs hover:border-accent/30 hover:text-foreground transition-all cursor-default"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── CORE VALUES ── */}
+        <section className="mb-24">
+          <div className="flex items-center gap-3 mb-12">
+            <div className="h-px flex-1 bg-accent/20" />
+            <span className="text-xs font-heading font-semibold tracking-widest text-accent uppercase">My Guarantees</span>
+            <div className="h-px flex-1 bg-accent/20" />
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {values.map((value, idx) => {
               const Icon = value.icon;
               return (
                 <div
                   key={idx}
-                  className="bg-card border border-accent/20 rounded-xl p-6 space-y-4 hover:border-accent/40 transition-all hover:scale-105 animate-fade-in-up"
+                  className="bg-card border border-accent/20 rounded-xl p-6 space-y-4 hover:border-accent/40 hover:scale-[1.02] transition-all animate-fade-in-up"
                   style={{ animationDelay: `${idx * 100}ms` }}
                 >
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
@@ -167,61 +380,112 @@ const About = () => {
           </div>
         </section>
 
-        {/* Process */}
+        {/* ── PROCESS ── */}
         <section className="mb-24">
-          <h2 className="text-3xl font-heading font-bold text-center mb-12">My Process</h2>
+          <div className="flex items-center gap-3 mb-12">
+            <div className="h-px flex-1 bg-accent/20" />
+            <span className="text-xs font-heading font-semibold tracking-widest text-accent uppercase">My Process</span>
+            <div className="h-px flex-1 bg-accent/20" />
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {process.map((item, idx) => (
               <div
                 key={idx}
-                className="relative bg-card border border-accent/20 rounded-xl p-6 space-y-4 animate-fade-in-up"
+                className="relative bg-card border border-accent/20 rounded-xl p-8 space-y-4 animate-fade-in-up group hover:border-accent/40 transition-all"
                 style={{ animationDelay: `${idx * 150}ms` }}
               >
-                <div className="text-6xl font-heading font-bold text-accent/20">{item.step}</div>
-                <h3 className="text-2xl font-heading font-semibold">{item.title}</h3>
+                {/* Connector line on desktop */}
+                {idx < process.length - 1 && (
+                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-px bg-gradient-to-r from-accent/40 to-transparent" />
+                )}
+                <div className="text-6xl font-heading font-bold text-accent/15 group-hover:text-accent/25 transition-colors">
+                  {item.step}
+                </div>
+                <h3 className="text-2xl font-heading font-semibold text-foreground">{item.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Expertise */}
+        {/* ── FAQ / DROPDOWN ── */}
         <section className="mb-24">
-          <h2 className="text-3xl font-heading font-bold text-center mb-12">Technical Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {expertise.map((area, idx) => (
+          <div className="flex items-center gap-3 mb-12">
+            <div className="h-px flex-1 bg-accent/20" />
+            <span className="text-xs font-heading font-semibold tracking-widest text-accent uppercase">Frequently Asked</span>
+            <div className="h-px flex-1 bg-accent/20" />
+          </div>
+
+          <div className="space-y-3">
+            {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-card border border-accent/20 rounded-xl p-6 space-y-4 animate-fade-in-up"
-                style={{ animationDelay: `${idx * 100}ms` }}
+                className="bg-card border border-accent/20 rounded-xl overflow-hidden animate-fade-in-up"
+                style={{ animationDelay: `${idx * 60}ms` }}
               >
-                <h3 className="text-xl font-heading font-semibold text-accent">
-                  {area.category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {area.skills.map((skill, i) => (
-                    <Badge
-                      key={i}
-                      variant="outline"
-                      className="border-accent/30 text-muted-foreground"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
+                <button
+                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                  className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-accent/5 transition-colors"
+                >
+                  <span className="font-heading font-semibold text-foreground pr-4">{faq.q}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-accent flex-shrink-0 transition-transform duration-300 ${
+                      openFaq === idx ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openFaq === idx ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="px-6 pb-5 border-t border-accent/10 pt-4">
+                    <p className="text-muted-foreground leading-relaxed">{faq.a}</p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* CTA */}
+        {/* ── CHARACTER STRIP ── */}
+        <section className="mb-24 animate-fade-in-up">
+          <div className="bg-card border border-accent/20 rounded-2xl p-8 md:p-10">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="h-px flex-1 bg-accent/20" />
+              <span className="text-xs font-heading font-semibold tracking-widest text-accent uppercase">Character</span>
+              <div className="h-px flex-1 bg-accent/20" />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              {["Determined", "Responsible", "Hard-Working"].map((trait, i) => (
+                <div key={i} className="space-y-2">
+                  <div className="text-4xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent to-cta">
+                    {trait}
+                  </div>
+                  <div className="h-px w-12 mx-auto bg-accent/30" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── CTA ── */}
         <section className="text-center space-y-8 pt-12 border-t border-accent/10">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold">
-            Let's Build Something Together
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Available for full-time opportunities, contract work, and technical consulting
-          </p>
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-5xl font-heading font-bold">
+              Let's Build Something{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-cta">
+                That Lasts
+              </span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Available for full-time roles, contract work, remote positions, and international opportunities.
+            </p>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button
@@ -247,6 +511,16 @@ const About = () => {
                 Download Resume
               </Button>
             </a>
+            <Link to="/work">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-accent/50 text-muted-foreground hover:bg-accent/10 hover:text-accent font-heading font-semibold text-lg px-8 py-6"
+              >
+                View My Work
+                <ExternalLink className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </div>
         </section>
       </div>
