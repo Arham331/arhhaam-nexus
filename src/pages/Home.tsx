@@ -154,7 +154,7 @@ const Home = () => {
                          animationFillMode: 'both'
                        }}>
                     <img 
-                      src="/Professional.png" 
+                      src="/Professional.jpeg" 
                       alt="Arham Malik - Professional Photo"
                       className="w-60 h-60 object-cover rounded-xl border border-primary/15 group-hover:border-accent/25 transition-all duration-1300 relative z-10"
                     />
